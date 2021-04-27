@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="act"
+            type="com.example.transitioneffect.MainActivity" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello Activity Transition" />
+
+        <Button
+            android:id="@+id/btn_setEnter_transition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="setEnterTransition"
+            android:onClick="@{() -> act.setEnterTransition()}"/>
+        <Button
+            android:id="@+id/btn_fade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="fade"
+            android:onClick="@{() -> act.fade()}"/>
+
+        <Button
+            android:id="@+id/btn_slide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="slide"
+            android:onClick="@{() -> act.slide()}"/>
+
+        <Button
+            android:id="@+id/btn_sharedSingletonElement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:transitionName="sharedSingletonElement"
+            android:text="sharedSingletonElement"
+            android:onClick="@{() -> act.sharedSingletonElement()}"/>
+        <Button
+            android:id="@+id/btn_sharedElementGroup01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:transitionName="sharedElementGroup01"
+            android:text="sharedElementGroup"
+            android:onClick="@{() -> act.sharedElementGroup()}"/>
+        <Button
+            android:id="@+id/btn_sharedElementGroup02"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:transitionName="sharedElementGroup02"
+            android:text="sharedElementGroup"
+            android:onClick="@{() -> act.sharedElementGroup()}"/>
+    </LinearLayout>
+</layout>
